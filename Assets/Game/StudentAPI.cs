@@ -1,6 +1,9 @@
 public static class StudentAPI {
-    public static bool IsAutoInstanceShop;
-    public static bool IsRotateAnimation;
-    public static bool IsClickAnimation;
-    public static bool IsClick;
+    public static bool IsRotateAnimation = true;
+    public static bool IsClickAnimation = true;
+    public static bool IsBackInstance;
+    public static bool ShopInstance = true;
+    public static bool IsAutoClick = true;
+    public static bool IsClick = true;
+    public static bool IsSave = true;
 }

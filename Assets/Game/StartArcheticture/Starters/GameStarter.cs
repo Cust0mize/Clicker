@@ -17,14 +17,15 @@ namespace Assets.Game.StartArcheticture.Starters {
             _observer = observer;
         }
 
+        private void Awake() {
+            
+        }
+
         private void Start() {
             //_uIService.Init();
             foreach (var item in _observer) {
                 item.StartObserv();
             }
-        }
-
-        private void Update() {
         }
     }
 }

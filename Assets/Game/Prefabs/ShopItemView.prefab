@@ -327,6 +327,7 @@ MonoBehaviour:
   _priceUI: {fileID: 6051605628258318088}
   _upIconImage: {fileID: 5440855663325092211}
   _downIconImage: {fileID: 3418236388813493886}
+  _clickButton: {fileID: -6199714560502251930}
 --- !u!222 &2217492679228704239
 CanvasRenderer:
   m_ObjectHideFlags: 0
