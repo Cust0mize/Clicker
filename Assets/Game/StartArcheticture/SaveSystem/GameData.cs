@@ -42,7 +42,27 @@ namespace Assets.Game.StartArcheticture.Save_System {
                 _autoclickScore = value;
                 Save();
             }
+        }        
+        
+        private int _currentLevelIndex;
+        public int CurrentLevelIndex {
+            get => _currentLevelIndex;
+            set {
+                _currentLevelIndex = value;
+                Save();
+            }
+        }        
+        
+
+        private float _levelProgressValue;
+        public float LevelProgressValue {
+            get => _levelProgressValue;
+            set {
+                _levelProgressValue = value;
+                Save();
+            }
         }
+
 
         #endregion
 
@@ -57,9 +77,15 @@ namespace Assets.Game.StartArcheticture.Save_System {
         }
 
         public void SetValue(GameData gameData) {
+            if (!StudentAPI.IsSave) {
+                return;
+            }
+
             if (gameData == null) {
                 return;
             }
+            LevelProgressValue = gameData.LevelProgressValue;
+            CurrentLevelIndex = gameData.CurrentLevelIndex;
             AutoclickScore = gameData.AutoclickScore;
             CurrentLocale = gameData.CurrentLocale;
             ScoreToClick = gameData.ScoreToClick;

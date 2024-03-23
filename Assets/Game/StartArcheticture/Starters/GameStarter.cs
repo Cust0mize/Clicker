@@ -23,8 +23,5 @@ namespace Assets.Game.StartArcheticture.Starters {
                 item.StartObserv();
             }
         }
-
-        private void Update() {
-        }
     }
 }

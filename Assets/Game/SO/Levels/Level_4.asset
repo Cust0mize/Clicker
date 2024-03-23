@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2e33adbe7b28b4aaad0416a99c34d2, type: 3}
   m_Name: Level_4
   m_EditorClassIdentifier: 
-  <SpriteImage>k__BackingField: {fileID: 21300000, guid: d4ecf6e8d7ae2394ab2d5004e8585d46, type: 3}
-  <Score>k__BackingField: 0
+  <SpriteImage>k__BackingField: {fileID: -472991924, guid: 94b03e0a5bf083b48b065fedad26f002, type: 3}
+  <Score>k__BackingField: 40

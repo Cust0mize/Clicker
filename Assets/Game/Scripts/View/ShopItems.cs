@@ -8,9 +8,9 @@ public class ShopItems : ScriptableObject {
     [field: SerializeField] public Sprite UpIcon { get; private set; }
     [field: SerializeField] public Sprite DownIcon { get; private set; }
     [field: SerializeField] public int UpgradeValue { get; private set; }
-    [field: SerializeField] private string Description;
+    [field: SerializeField] private string _description;
 
     public string GetDescription() {
-        return $"+{UpgradeValue} {Description}";
+        return $"+{UpgradeValue} {_description}";
     }
 }
