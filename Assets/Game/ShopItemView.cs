@@ -1,14 +1,14 @@
 ﻿using Assets.Game.StartArcheticture.ClassExtension;
 using UnityEngine.UI;
 using UnityEngine;
-using TMPro;
 using Zenject;
-using R3;
+using TMPro;
 
 public class ShopItemView : MonoBehaviour {
     [field: SerializeField] public RectTransform CurrentRect { get; private set; }
 
     [SerializeField] private TextMeshProUGUI _nameUI;
+    [SerializeField] private AudioSource _buySource;
     [SerializeField] private TextMeshProUGUI _descriptionUI;
     [SerializeField] private TextMeshProUGUI _priceUI;
     [SerializeField] private Image _upIconImage;
@@ -32,19 +32,13 @@ public class ShopItemView : MonoBehaviour {
         _upgradeInfo = new UpgradeInfo(shopItems.UpgradeType, shopItems.UpgradeValue, shopItems.Price);
     }
 
-    private void Click() {
-        _scoreModel.Upgrade(_upgradeInfo);
+    public void ButtonChangeState(int currentScoreValue) {
+        _clickButton.interactable = _upgradeInfo.UpgradePrice <= currentScoreValue;
     }
-}
 
-public struct UpgradeInfo {
-    public UpgradeType UpgradeType { get; private set; }
-    public int UpgradeValue { get; private set; }
-    public int UpgradePrice { get; private set; }
-
-    public UpgradeInfo(UpgradeType upgradeType, int upgradeValue, int upgradePrice) {
-        UpgradeType = upgradeType;
-        UpgradeValue = upgradeValue;
-        UpgradePrice = upgradePrice;
+    private void Click() {
+        if (_scoreModel.CanUpgrade(_upgradeInfo)) {
+            _buySource.PlayOneShot(_buySource.clip);
+        }
     }
 }

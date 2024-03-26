@@ -83,8 +83,8 @@
     <Compile Include="Assets\Game\StartArcheticture\Services\StaticLocalization.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Managers\AudioMixerManager.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\LocalizationService.cs" />
+    <Compile Include="Assets\Game\UpgradeInfo.cs" />
     <Compile Include="Assets\Game\Scripts\View\ScoreModel.cs" />
-    <Compile Include="Assets\Game\StudentAPI.cs" />
     <Compile Include="Assets\Game\ShopItemView.cs" />
     <Compile Include="Assets\Game\Scripts\View\MainImageObserver.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\UIService.cs" />
@@ -100,8 +100,8 @@
     <Compile Include="Assets\Game\Scripts\View\ScoreObserver.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\CsvParserService.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Managers\CheatManager.cs" />
+    <Compile Include="Assets\Game\FadeText.cs" />
     <Compile Include="Assets\Game\Scripts\View\MainImageView.cs" />
-    <Compile Include="Assets\Game\BackInstaller.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\AnimatedCounte.cs" />
     <Compile Include="Assets\Game\StartArcheticture\SaveSystem\GameData.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\RectUtils.cs" />

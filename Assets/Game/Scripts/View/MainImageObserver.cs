@@ -13,5 +13,6 @@ public class MainImageObserver : IObserver {
 
     public void StartObserv() {
         _levelModel.CurrentLevelProperty.Subscribe(_mainImageView.UpdateImage);
+        _levelModel.LevelUpdate += _mainImageView.SoundPlay;
     }
 }

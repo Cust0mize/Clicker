@@ -8,6 +8,7 @@ public class LevelModel {
     private ReactiveProperty<float> _levelPrecentProperty = new();
     public ReadOnlyReactiveProperty<Level> CurrentLevelProperty => _currentLevelProperty;
     private ReactiveProperty<Level> _currentLevelProperty = new();
+    public event Action LevelUpdate;
 
     private float _progressValue;
 
@@ -53,6 +54,7 @@ public class LevelModel {
         _gameData.CurrentLevelIndex = _currentLevelIndex;
         if (_levels.Length > _currentLevelIndex) {
             _currentLevelProperty.Value = _levels[_currentLevelIndex];
+            LevelUpdate?.Invoke();
         }
     }
 }
@@ -75,9 +77,7 @@ public class ScoreModel {
         _scoreValueProperty.Value = _gameData.AllScore;
         _scoreToClick = _gameData.ScoreToClick;
 
-        if (StudentAPI.IsAutoClick) {
-            AddScoreToAutoClick();
-        }
+        AddScoreToAutoClick();
     }
 
     public void RemoveScore(int removeValue) {
@@ -98,7 +98,8 @@ public class ScoreModel {
         }
     }
 
-    public void Upgrade(UpgradeInfo upgradeInfo) {
+    public bool CanUpgrade(UpgradeInfo upgradeInfo) {
+        bool result = false;
         if (CanBuy(upgradeInfo.UpgradePrice)) {
             RemoveScore(upgradeInfo.UpgradePrice);
             switch (upgradeInfo.UpgradeType) {
@@ -111,7 +112,9 @@ public class ScoreModel {
                     _gameData.ScoreToClick = _scoreToClick;
                     break;
             }
+            result = true;
         }
+        return result;
     }
 
     private bool CanBuy(int priceValue) {

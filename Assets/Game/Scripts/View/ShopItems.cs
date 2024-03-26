@@ -11,6 +11,6 @@ public class ShopItems : ScriptableObject {
     [field: SerializeField] private string _description;
 
     public string GetDescription() {
-        return $"+{UpgradeValue} {_description}";
+        return string.Format(_description, UpgradeValue);
     }
 }

@@ -77,10 +77,6 @@ namespace Assets.Game.StartArcheticture.Save_System {
         }
 
         public void SetValue(GameData gameData) {
-            if (!StudentAPI.IsSave) {
-                return;
-            }
-
             if (gameData == null) {
                 return;
             }

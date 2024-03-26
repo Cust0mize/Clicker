@@ -5,6 +5,7 @@ using Zenject;
 [RequireComponent(typeof(UIService))]
 public class GameSceneInstaller : MonoInstaller {
     //[SerializeField] private ScreenBlurController _screenBlurController;
+    [SerializeField] private ShopItems[] _shopItems;
     [SerializeField] private Level[] _levels;
 
     public override void InstallBindings() {
@@ -14,6 +15,7 @@ public class GameSceneInstaller : MonoInstaller {
         Container.Bind<IObserver>().To(x => x.AllNonAbstractClasses().DerivingFrom<IObserver>()).AsSingle().NonLazy();
         Container.Bind<IObservable>().FromComponentsInHierarchy().AsCached().NonLazy();
         Container.Bind<Level[]>().FromInstance(_levels).AsCached().NonLazy();
+        Container.Bind<ShopItems[]>().FromInstance(_shopItems).AsCached().NonLazy();
         Container.Bind<LevelModel>().AsSingle().NonLazy();
     }
 }
