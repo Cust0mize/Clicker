@@ -2,6 +2,9 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
+using Object = UnityEngine.Object;
 
 namespace Assets.Game.StartArcheticture.ClassExtension {
     public static class Extension {
@@ -91,6 +94,12 @@ namespace Assets.Game.StartArcheticture.ClassExtension {
         public static Vector3 AddZ(this Vector3 value, float z) {
             value.z += z;
             return value;
+        }
+    }
+
+    public static class ArrayExtension {
+        public static bool NotEmpty(this Array array) {
+            return array.Length > 0;
         }
     }
 }

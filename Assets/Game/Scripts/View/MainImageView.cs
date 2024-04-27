@@ -2,10 +2,16 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using UnityEngine;
 using Zenject;
+using System;
 
-public class MainImageView : MonoBehaviour, IPointerDownHandler {
-    private Tweener _tweener;
+public class MainImageView : MonoBehaviour, IPointerDownHandler, IObservable {
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private AudioSource _clickSound;
+    [SerializeField] private AudioSource _updateLevelSound;
+    [SerializeField] private ParticleSystem _catParticle;
+    [SerializeField] private FadeText _fadeText;
     private ScoreModel _scoreModel;
+    private Tweener _tweener;
 
     [Inject]
     public void Construct(ScoreModel scoreModel) {
@@ -17,8 +23,14 @@ public class MainImageView : MonoBehaviour, IPointerDownHandler {
     }
 
     public void OnPointerDown(PointerEventData eventData) {
-        StartAnimation();
-        _scoreModel.AddScoreToSingleClick();
+        if (Input.GetMouseButtonDown(0)) {
+            StartAnimation();
+            _scoreModel.AddScoreToSingleClick();
+            _clickSound.PlayOneShot(_clickSound.clip);
+            var particle = Instantiate(_catParticle, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+            FadeText fadeText = Instantiate(_fadeText);
+            Destroy(particle.gameObject, 1);
+        }
     }
 
     public void StartAnimation() {
@@ -33,4 +45,13 @@ public class MainImageView : MonoBehaviour, IPointerDownHandler {
             _tweener.Restart();
         }
     }
+
+    public void UpdateImage(Level level) {
+        _spriteRenderer.sprite = level.SpriteImage;
+    }
+
+    public void SoundPlay() {
+        _updateLevelSound.PlayOneShot(_updateLevelSound.clip);
+    }
 }
+

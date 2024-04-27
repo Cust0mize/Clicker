@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae1cefea44817542b05707e4e784039, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  <UpgradeType>k__BackingField: 0
+  <Name>k__BackingField: Autoclick
+  <Price>k__BackingField: 100
+  <UpIcon>k__BackingField: {fileID: 21300000, guid: 9148753cf671506418e12914333c168b, type: 3}
+  <DownIcon>k__BackingField: {fileID: 21300000, guid: dff94d18999aca4488c4be998f946d10, type: 3}
+  <UpgradeValue>k__BackingField: 10
+  _description: '{0} To autoclick'
