@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Game\StartArcheticture\Services\SceneLoaderService.cs" />
-    <Compile Include="Assets\Game\ShopViewController.cs" />
+    <Compile Include="Assets\Game\Scripts\RectUtils.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\ResourceLoaderService.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\TweenHelper.cs" />
     <Compile Include="Assets\Game\Scripts\View\Level.cs" />
@@ -72,7 +72,6 @@
     <Compile Include="Assets\Game\StartArcheticture\UI\WindowShowHideAnimation.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Starters\EntryPointStarter.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Installers\GameSceneInstaller.cs" />
-    <Compile Include="Assets\Game\RectUtils.cs" />
     <Compile Include="Assets\Game\StartArcheticture\ClassExtension\Extension.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\ParticleAnimationService.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\ScreenBlurController.cs" />
@@ -83,12 +82,11 @@
     <Compile Include="Assets\Game\StartArcheticture\Services\StaticLocalization.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Managers\AudioMixerManager.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\LocalizationService.cs" />
-    <Compile Include="Assets\Game\UpgradeInfo.cs" />
     <Compile Include="Assets\Game\Scripts\View\ScoreModel.cs" />
-    <Compile Include="Assets\Game\ShopItemView.cs" />
     <Compile Include="Assets\Game\Scripts\View\MainImageObserver.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\UIService.cs" />
     <Compile Include="Assets\Game\Scripts\View\ShopItems.cs" />
+    <Compile Include="Assets\Game\Scripts\FadeText.cs" />
     <Compile Include="Assets\Game\StartArcheticture\SaveSystem\SaveSystem.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Configs\LocaleConfig.cs" />
     <Compile Include="Assets\Game\Scripts\View\LevelProgressBarObserver.cs" />
@@ -100,10 +98,12 @@
     <Compile Include="Assets\Game\Scripts\View\ScoreObserver.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\CsvParserService.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Managers\CheatManager.cs" />
-    <Compile Include="Assets\Game\FadeText.cs" />
     <Compile Include="Assets\Game\Scripts\View\MainImageView.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\AnimatedCounte.cs" />
     <Compile Include="Assets\Game\StartArcheticture\SaveSystem\GameData.cs" />
+    <Compile Include="Assets\Game\Scripts\UpgradeInfo.cs" />
+    <Compile Include="Assets\Game\Scripts\ShopViewController.cs" />
+    <Compile Include="Assets\Game\Scripts\ShopItemView.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\RectUtils.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\UIPanel.cs" />
   </ItemGroup>
