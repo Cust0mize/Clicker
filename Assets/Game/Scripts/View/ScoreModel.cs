@@ -65,8 +65,8 @@ public class ScoreModel {
     public ReadOnlyReactiveProperty<int> AutoClickScoreProperty => _autoClickScoreProperty;
     private ReactiveProperty<int> _autoClickScoreProperty = new();
 
+    public int ScoreToClick { get; private set; }
     private float _timeToClick = 1;
-    private int _scoreToClick;
     private GameData _gameData;
     private readonly LevelModel _levelModel;
 
@@ -75,7 +75,7 @@ public class ScoreModel {
         _gameData = gameData;
         _autoClickScoreProperty.Value = _gameData.AutoclickScore;
         _scoreValueProperty.Value = _gameData.AllScore;
-        _scoreToClick = _gameData.ScoreToClick;
+        ScoreToClick = _gameData.ScoreToClick;
 
         AddScoreToAutoClick();
     }
@@ -87,12 +87,12 @@ public class ScoreModel {
     }
 
     public void AddScoreToSingleClick() {
-        SetScore(_scoreToClick);
-        _levelModel.AddProgressLevelValue(_scoreToClick);
+        SetScore(ScoreToClick);
+        _levelModel.AddProgressLevelValue(ScoreToClick);
     }
 
     public async void AddScoreToAutoClick() {
-        while (true) {
+        while (true && StudentApi.IsEnableAutoClick) {
             await UniTask.Delay(TimeSpan.FromSeconds(_timeToClick));
             SetScore(_autoClickScoreProperty.Value);
         }
@@ -108,8 +108,8 @@ public class ScoreModel {
                     _gameData.AutoclickScore = _autoClickScoreProperty.Value;
                     break;
                 case UpgradeType.SimpleClick:
-                    _scoreToClick += upgradeInfo.UpgradeValue;
-                    _gameData.ScoreToClick = _scoreToClick;
+                    ScoreToClick += upgradeInfo.UpgradeValue;
+                    _gameData.ScoreToClick = ScoreToClick;
                     break;
             }
             result = true;

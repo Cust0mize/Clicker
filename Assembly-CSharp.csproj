@@ -72,6 +72,7 @@
     <Compile Include="Assets\Game\StartArcheticture\UI\WindowShowHideAnimation.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Starters\EntryPointStarter.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Installers\GameSceneInstaller.cs" />
+    <Compile Include="Assets\Game\Scripts\StudentApi.cs" />
     <Compile Include="Assets\Game\StartArcheticture\ClassExtension\Extension.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\ParticleAnimationService.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\ScreenBlurController.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Game\StartArcheticture\GlobalAsyncProcessor.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\StaticLocalization.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Managers\AudioMixerManager.cs" />
+    <Compile Include="Assets\StudentScript.cs" />
     <Compile Include="Assets\Game\StartArcheticture\Services\LocalizationService.cs" />
     <Compile Include="Assets\Game\Scripts\View\ScoreModel.cs" />
     <Compile Include="Assets\Game\Scripts\View\MainImageObserver.cs" />
@@ -102,8 +104,8 @@
     <Compile Include="Assets\Game\StartArcheticture\UI\AnimatedCounte.cs" />
     <Compile Include="Assets\Game\StartArcheticture\SaveSystem\GameData.cs" />
     <Compile Include="Assets\Game\Scripts\UpgradeInfo.cs" />
-    <Compile Include="Assets\Game\Scripts\ShopViewController.cs" />
     <Compile Include="Assets\Game\Scripts\ShopItemView.cs" />
+    <Compile Include="Assets\Game\Scripts\ShopViewController.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\RectUtils.cs" />
     <Compile Include="Assets\Game\StartArcheticture\UI\UIPanel.cs" />
   </ItemGroup>

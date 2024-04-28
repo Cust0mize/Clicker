@@ -417,7 +417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &542839780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e539d2652161dc24facac9226e551461, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopItems:
   - {fileID: 11400000, guid: cca76ab2f3ca1274c8c6a2d36253bf45, type: 2}
+  - {fileID: 11400000, guid: c8685c3b47222184c8acc45e7362ba68, type: 2}
   _levels:
   - {fileID: 11400000, guid: 73e313161d42871468a19239e6e72def, type: 2}
   - {fileID: 11400000, guid: e1b62f720869daf4ba581c5b35a65b32, type: 2}
@@ -1086,7 +1087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1305414388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1579,12 +1580,12 @@ GameObject:
   - component: {fileID: 1573889322}
   - component: {fileID: 1573889321}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1573889321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1680,6 +1681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694040305}
   - component: {fileID: 1694040304}
+  - component: {fileID: 1694040306}
   m_Layer: 0
   m_Name: Starter
   m_TagString: Untagged
@@ -1699,6 +1701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4b2669f44ea9f468510c50cf3817bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mainImageView: {fileID: 1305414391}
+  _mainSound: {fileID: 889602200}
+  _uiCanvas: {fileID: 1573889323}
+  _back: {fileID: 542839780}
 --- !u!4 &1694040305
 Transform:
   m_ObjectHideFlags: 0
@@ -1714,6 +1720,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1694040306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694040303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616d7d0f648ba9d43bcb99c08136fef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1756438973
 GameObject:
   m_ObjectHideFlags: 0

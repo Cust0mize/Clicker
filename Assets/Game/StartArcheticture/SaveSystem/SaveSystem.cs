@@ -6,13 +6,20 @@ namespace Assets.Game.StartArcheticture.Save_System {
         private const string DATA_KEY = "SaveSystem";
 
         public void Save(GameData gameData) {
-            string stringData = JsonConvert.SerializeObject(gameData);
-            PlayerPrefs.SetString(DATA_KEY, stringData);
+            if (StudentApi.IsEnableSaveSystem) {
+                string stringData = JsonConvert.SerializeObject(gameData);
+                PlayerPrefs.SetString(DATA_KEY, stringData);
+            }
         }
 
         public GameData LoadFromDevice() {
-            string stringData = PlayerPrefs.GetString(DATA_KEY);
-            return JsonConvert.DeserializeObject<GameData>(stringData);
+            if (StudentApi.IsEnableSaveSystem) {
+                string stringData = PlayerPrefs.GetString(DATA_KEY);
+                return JsonConvert.DeserializeObject<GameData>(stringData);
+            }
+            else {
+                return null;
+            }
         }
     }
 }

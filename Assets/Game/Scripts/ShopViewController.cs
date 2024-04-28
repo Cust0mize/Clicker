@@ -21,14 +21,16 @@ public class ShopViewController : MonoBehaviour {
     }
 
     private void Start() {
-        foreach (var item in _shopItems) {
-            ShopItemView element = _diContainer.InstantiatePrefabForComponent<ShopItemView>(_shopItemViewPrefab, _targetRext);
-            element.InitImage(item);
-            ShopItemViewObserver shopItemViewObserver = new(element, _diContainer.Resolve<ScoreModel>());
-            _shopItemViews.Add(element);
-        }
+        if (StudentApi.IsEnableShop) {
+            foreach (var item in _shopItems) {
+                ShopItemView element = _diContainer.InstantiatePrefabForComponent<ShopItemView>(_shopItemViewPrefab, _targetRext);
+                element.InitImage(item);
+                ShopItemViewObserver shopItemViewObserver = new(element, _diContainer.Resolve<ScoreModel>());
+                _shopItemViews.Add(element);
+            }
 
-        RectUtils.SetVerticalRectInLayoutGroup(_targetRext, _horizontalLayoutGroup, _shopItemViews[0].CurrentRect.rect.height, _shopItemViews.Count);
+            RectUtils.SetVerticalRectInLayoutGroup(_targetRext, _horizontalLayoutGroup, _shopItemViews[0].CurrentRect.rect.height, _shopItemViews.Count);
+        }
     }
 }
 
