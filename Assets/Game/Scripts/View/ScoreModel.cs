@@ -92,7 +92,7 @@ public class ScoreModel {
     }
 
     public async void AddScoreToAutoClick() {
-        while (true && StudentApi.IsEnableAutoClick) {
+        while (true) {
             await UniTask.Delay(TimeSpan.FromSeconds(_timeToClick));
             SetScore(_autoClickScoreProperty.Value);
         }

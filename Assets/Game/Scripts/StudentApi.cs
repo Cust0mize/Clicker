@@ -1,15 +1,14 @@
 using UnityEngine;
 
 public class StudentApi : MonoBehaviour {
-    public static bool IsEnableSaveSystem = true;
-    public static bool IsEnableAutoClick = true;
-    public static bool IsPlayEffectClick = true;
-    public static bool IsPlayFadeText = true;
-    public static bool IsInstanceBack = true;
-    public static bool IsEnableClick = true;
-    public static bool IsEnableShop = true;
-    public static bool IsUIInstance = true;
-    public static bool IsSoundPlay = true;
-    public static bool IsRotateCat = true;
-    public static bool IsSpawnCat = true;
+    public static bool IsEnableSaveSystem;
+    public static bool IsPlayEffectClick;
+    public static bool IsPlayFadeText;
+    public static bool IsInstanceBack;
+    public static bool IsEnableClick;
+    public static bool IsEnableShop;
+    public static bool IsUIInstance;
+    public static bool IsSoundPlay;
+    public static bool IsRotateCat;
+    public static bool IsSpawnCat;
 }
