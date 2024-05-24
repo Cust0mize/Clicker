@@ -11,4 +11,7 @@ public class StudentApi : MonoBehaviour {
     public static bool IsSoundPlay = true;
     public static bool IsRotateCat = true;
     public static bool IsSpawnCat = true;
+
+
+    //Это изменения в девелопе чисто для теста
 }
