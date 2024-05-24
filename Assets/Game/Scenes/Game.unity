@@ -1001,6 +1001,7 @@ MonoBehaviour:
   _shopItems:
   - {fileID: 11400000, guid: cca76ab2f3ca1274c8c6a2d36253bf45, type: 2}
   - {fileID: 11400000, guid: c8685c3b47222184c8acc45e7362ba68, type: 2}
+  - {fileID: 11400000, guid: 2b9452a179edab74da317c4eb35c4211, type: 2}
   _levels:
   - {fileID: 11400000, guid: 73e313161d42871468a19239e6e72def, type: 2}
   - {fileID: 11400000, guid: e1b62f720869daf4ba581c5b35a65b32, type: 2}
