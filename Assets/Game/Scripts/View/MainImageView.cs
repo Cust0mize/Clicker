@@ -67,4 +67,3 @@ public class MainImageView : MonoBehaviour, IPointerDownHandler, IObservable {
 //Reva
 //Reva
 //Reva
-//Reva
