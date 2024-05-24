@@ -14,6 +14,6 @@ public class FadeText : MonoBehaviour {
         _canvasGroup.DOFade(0, 2);
         _textUI.text = fadeText;
 
-        //asdfasdfsadf
+        //Это изменения чисто для теста...
     }
 }
