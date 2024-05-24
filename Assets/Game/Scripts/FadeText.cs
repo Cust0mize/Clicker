@@ -13,5 +13,7 @@ public class FadeText : MonoBehaviour {
         _textUI.transform.DOMoveY(transform.position.y + 10, 2);
         _canvasGroup.DOFade(0, 2);
         _textUI.text = fadeText;
+
+        //Это изменения чисто для теста...
     }
 }
